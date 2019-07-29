@@ -1,17 +1,6 @@
 package hellofx;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.InputStream;
-import java.net.URL;
-import java.nio.file.Paths;
-
-import javax.imageio.ImageIO;
-
-import org.apache.commons.io.IOUtils;
 import org.curiousworks.BlueMarble;
-import org.json.JSONObject;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
@@ -32,18 +21,19 @@ public class BlueMarbleController {
 		int day = datePicker.getValue().getDayOfMonth();
 		int month = datePicker.getValue().getMonthValue();
 		int year = datePicker.getValue().getYear();
-		String monthToString = "";
-		if (month < 10)
-			monthToString = "-0" + Integer.toString(month);
-		else
-			monthToString = "-" + Integer.toString(month);
-		System.out.println(monthToString);
+		
 		String dayToString = "";
 		if (day < 10)
 			dayToString = "-0" + Integer.toString(day);
 		else
 			dayToString = "-" + Integer.toString(day);
 		System.out.println(dayToString);
+		String monthToString = "";
+		if (month < 10)
+			monthToString = "-0" + Integer.toString(month);
+		else
+			monthToString = "-" + Integer.toString(month);
+		System.out.println(monthToString);
 		return year + monthToString + "-" + dayToString;
 	}
 

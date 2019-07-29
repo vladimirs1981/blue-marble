@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.BlueMarbleController">
    <children>
       <ImageView fx:id="image" fitHeight="375.0" fitWidth="389.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <DatePicker fx:id="datePicker" layoutX="520.0" layoutY="17.0" onAction="#updateDate" prefHeight="49.0" prefWidth="23.0" />
+      <DatePicker fx:id="datePicker" layoutX="403.0" layoutY="31.0" onAction="#updateDate" prefHeight="49.0" prefWidth="161.0" />
+      <Text layoutX="407.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a date:" />
+      <Button layoutX="460.0" layoutY="112.0" mnemonicParsing="false" onAction="#viewEnhancedImage" text="Enhanced Image" />
+      <Button layoutX="460.0" layoutY="155.0" mnemonicParsing="false" onAction="#convertImageToBlackAndWhite" text="Black&amp;White" />
    </children>
 </AnchorPane>

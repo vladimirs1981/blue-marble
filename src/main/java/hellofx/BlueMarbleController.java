@@ -21,7 +21,7 @@ public class BlueMarbleController {
 		int day = datePicker.getValue().getDayOfMonth();
 		int month = datePicker.getValue().getMonthValue();
 		int year = datePicker.getValue().getYear();
-		
+
 		String dayToString = "";
 		if (day < 10)
 			dayToString = "-0" + Integer.toString(day);
@@ -54,10 +54,16 @@ public class BlueMarbleController {
 
 		BlueMarble blueMarble = new BlueMarble();
 		blueMarble.setDate(getStringValueFromDatePicker());
-		blueMarble.setEnhanced(true);
-		image.setImage(new Image(blueMarble.getImage()));
-		blueMarble.setEnhanced(false);
 
+		if (datePicker.getValue().getMonthValue() > 7 && datePicker.getValue().getYear() >= 2018) {
+
+			blueMarble.setEnhanced(false);
+			
+		} else {
+
+			blueMarble.setEnhanced(true);
+			image.setImage(new Image(blueMarble.getImage()));
+		}
 	}
 
 	@FXML
